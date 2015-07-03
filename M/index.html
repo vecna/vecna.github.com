@@ -28,9 +28,20 @@
 			border-bottom: 1px solid #B4B5B0;
 		}
 	</style>
+	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
 	<script>
 		function blink() {
-			console.log("blink");
+
+			$('.blink').each(function() {
+				var elem = $(this);
+				setInterval(function() {
+					if (elem.css('visibility') == 'hidden') {
+						elem.css('visibility', 'visible');
+					} else {
+						elem.css('visibility', 'hidden');
+					}
+				}, 500);
+			});
 		}
 	</script>
 </head>
@@ -44,6 +55,20 @@
 			<section data-background="../images/manyface.jpg">
 				<h1>approcio alternativo di autodifesa digitale</h1>
 				<p>Claudio Agosti vecna@globaleaks.org</p>
+				<small>@sniffjoke</small>
+				<div class="left">
+				<pre>
+pub   1024D/0xC6765430 2009-08-25 [expires: 2015-11-23]
+      Key fingerprint = 341F 1A8C E2B4 F4F4 174D  7C21 B842 093D C676 5430
+uid          vecna (a Random GlobaLeks Developer) &lt;vecna@globaleaks.org&gt;
+uid          Claudio Agosti &lt;claudio.agosti@logioshermes.org&gt;
+uid          keybase.io/vecna &lt;vecna@keybase.io&gt;
+uid          Claudio &lt;claudio@tacticaltech.org&gt;
+sub   3360g/0x70D50BBA 2012-10-10 [expires: 2015-11-23]
+sub   3072g/0xE8157737 2009-08-25 [expires: 2015-11-23]
+				</pre>
+					<small>Questa presentazione su https://vecna.github.io</small>
+				</div>
 			</section>
 
 			<section class="left">
