@@ -23,16 +23,54 @@
 			float: left;
 			width: 50%;
 		}
+		.tableline {
+			border-collapse: collapse;
+			border-bottom: 1px solid #B4B5B0;
+		}
 	</style>
+	<script>
+		function blink() {
+			console.log("blink");
+		}
+	</script>
 </head>
 
-<body>
+<body onload="blink()">
 	<!-- Wrap the entire slide show in a div using the "reveal" class. -->
 	<div class="reveal">
 		<!-- Wrap all slides in a single "slides" class -->
 		<div class="slides">
 
-			<section data-background="../images/manyface.jpg"></section>
+			<section data-background="../images/manyface.jpg">
+				<h1>approcio alternativo di autodifesa digitale</h1>
+				<p>Claudio Agosti vecna@globaleaks.org</p>
+			</section>
+
+			<section class="left">
+				<div class="floatleft">
+					<div class="container">
+						<img src="../images/uno-nessuno.png" />
+					</div>
+					<div class="container">
+						<blockquote>
+							L'autore stesso, in una lettera autobiografica, lo definisce come il romanzo "più amaro di tutti, profondamente umoristico, di scomposizione della vita".
+						</blockquote>
+						Ognuno di noi è molteplici IO: gli attacchi digitali, sfruttano la sovrapposizione delle nostre reti sociali.
+					</div>
+				</div>
+			</section>
+
+
+			<section class="left">
+				<div class="floatleft">
+					<div class="container">
+						<img src="../images/computersecuritychain.jpg" />
+					</div>
+					<div class="container">
+						<p>L'autodifesa digitale è stata concepita come un'analisi del rischio e individuazione del peggior scenario possibile</p>
+					</div>
+				</div>
+			</section>
 
 			<section class="left">
 				<div class="floatleft">
@@ -42,7 +80,7 @@
 					<div class="container">
                         <ol>
                             <li>Non tutti possono godere dello stesso modello di sicurezza</li>
-                            <li>Anche i contesti più delicati sono in mano a persone che hanno una vita digitale a barriere abbassate</li>
+                            <li>I contesti più delicati sono in mano a persone. Esse hanno una vita digitale con barriere abbassate come tutti.</li>
                         </ol>
 					</div>
 				</div>
@@ -55,9 +93,7 @@
 						<img src="../images/sniper-child.jpg"/>
 					</div>
 					<div class="container">
-						<p>L'effetto è di rendere la protezione più difficile
-							<br>
-                        	E le aspettative dell'utente sono un po' vincolanti...
+						<p>La protezione è resa più difficile da:
                             <ul>
                                 <li>Tutti i tuoi contesti "affiancati"</li>
                                 <li>Capacità di potenziare i dispositivi</li>
@@ -105,7 +141,8 @@
 						<div class="container">
 							La creazione di identità multiple è correntamrnte osteggiata, ed i meccanismi di associazione che un fornitore di servizio ha per <i>ricollegarti</i>, sono maggiori di quello che vediamo.
 						</div>
-						<small>Ma almeno, all'intenro del Social Network e dell'analisi esterna, delle identità possono non essere correlate.</small>
+						<small>Ma almeno, all'interno del Social Network e dall'OSINT, le identità possono non essere correlate.</small>
+						<small>l'OTT avrebbe possibilità di correlare fingerprint ed attività. dipende dal modello di rischio.</small>
 					</div>
 				</section>
 			</section>
@@ -138,9 +175,10 @@
 						Profilo di rischio: Medio<br><br>
 						Reti: Pubblica (ma con  identità riservata sacrificabile ?)<br><br>
 						Training: minimale<br><br>
-						Risorse: cross-nazionalità di Internet<br>
+						Risorse: cross-nazionalità di Internet *<br>
 					</div>
 				</div>
+				<small>* Cercando temi, o condizioni politiche favorevoli.</small>
 			</section>
 
 			<section class="left">
@@ -154,6 +192,103 @@
 						Rischio: se sono chiuso, sto da solo. se sono aperto, vengo attaccato o infiltrato.<br>
 					</div>
 				</div>
+			</section>
+
+			<section class="left">
+				<div class="floatleft">
+					<div class="container">
+						<img src="../images/ethiopia-oromo.jpg"/>
+					</div>
+					<div class="container">
+						Profilo di rischio: Medio/Alto<br><br>
+						Reti: Interna<br><br>
+						Evento: Infiltrazione sfrutta mancanza di policy
+					</div>
+				</div>
+				<small>Report di
+					<a href="https://citizenlab.org/2014/02/hacking-team-targeting-ethiopian-journalists/">Citizenlab</a> e
+					<a href="http://mashable.com/2014/03/25/ethiopia-european-chinese-technology-surveillance/">inchiesta</a>.
+				</small>
+			</section>
+
+			<section>
+				<small id="first" class="blink" style='color: #17ff2e; font-family: "News Cycle", Impact, sans-serif'>❤ unica slide senza immagini ❤</small>
+                <ul>
+                    <li>
+                        <b>
+                            Attacchi:
+                        </b>
+                        OSINT, Infiltrazione, Analisi del traffico
+                    </li>
+
+                    <li>
+                        <b>
+                            Identità temporanea:
+                        </b>
+                        Scopre contestuale, Rete da validarsi, VPN/Tor
+                    </li>
+
+                    <li>
+                        <b>
+                            Identità dedicata:
+                        </b>
+                        Scopre contestuale, OOB Trust, Tor/OTT :(
+                    </li>
+                    <li>
+                        <b>
+                            Attività casuale:
+                        </b>
+                        Servono utenti - Va ciclata, N/A, Casa ? o VPN
+                    </li>
+                </ul>
+				<small id="second" class="blink" style='color: #17ff2e; font-family: "News Cycle", Impact, sans-serif'>❤ unica slide senza immagini ❤</small>
+			</section>
+
+			<section>
+				<h2>Superficie d'attacco</h2>
+				<div class="floatleft">
+					<div class="container">
+						<img src="../images/attackers.jpg" />
+					</div>
+
+                    <div class="container">
+                        <ul>
+                            <li>
+                                Scovare login e password
+                            </li>
+                            <li>
+                                Intercettare il traffico
+                            </li>
+                            <li>
+                                Avere accesso ai dati conservati
+                            </li>
+                            <li>
+                                Violare il sistema tramite le sue interfaccie pubbliche
+                            </li>
+                        </ul>
+                    </div>
+				</div>
+			</section>
+
+			<section>
+				<h2>Come</h2>
+				<div class="floatleft">
+					<div class="container">
+						<img src="../images/identiysplitting.jpg" />
+					</div>
+					<div class="container">
+						<ul>
+							<li>Riconoscere le reti piccolo mondo</li>
+							<li>Profili separati e browser separati</li>
+							<li>Account email temporanei, policy per password</li>
+							<li>CubeOS</li>
+							<li>Mobile: Non ho mai esplorato! (<a href="https://www.samsungknox.com/en/products/my-knox">Knox?</a>)</li>
+						</ul>
+					</div>
+				</div>
+            </section>
+
+			<section data-background="../images/onedonosimply.jpg">
 			</section>
 
 		</div>
