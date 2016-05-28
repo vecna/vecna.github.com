@@ -1,1 +1,191 @@
-W/index.html
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Signal+Tor</title>
+	<link rel="stylesheet" href="../node_modules/reveal.js/css/reveal.min.css">
+	<link rel="stylesheet" href="../node_modules/reveal.js/css/theme/default.css" id="theme">
+
+	<style>
+		.authorscointainer {
+			border: solid 2px wheat;
+			clear: both;
+			padding: 3px;
+		}
+		.left {
+			text-align: left;
+		}
+		.floatleft {
+			text-align: left;
+			clear: both;
+		}
+		.container {
+			float: left;
+			width: 50%;
+		}
+		.tableline {
+			border-collapse: collapse;
+			border-bottom: 1px solid #B4B5B0;
+		}
+	</style>
+	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+	<script>
+		var blink = function() {
+
+			$('.blink').each(function() {
+				var elem = $(this);
+				setInterval(function() {
+					if (elem.css('visibility') == 'hidden') {
+						elem.css('visibility', 'visible');
+					} else {
+						elem.css('visibility', 'hidden');
+					}
+				}, 500);
+			});
+		}
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+
+			<section data-background="../images/manyface.jpg">
+				<h1>Signal + Tor</h1>
+        <h3>Proteggere telefonate, messaggi e navigazione</h3>
+				<p>Centro Studi Hermes</p>
+				<p>Coalizione Italiana Libertà e Diritti (CILD)</p>
+			</section>
+
+
+      <section>
+        <section>
+          <h3>Di preciso, da chi ci dovremmo proteggere?</h3>
+          <p>Pensamo a quel che ci ha rivelato Snowden, cosa possiamo dedurre?</p>
+        </section>
+
+        <section data-background="../images/SWB-Leaders.png">
+        </section>
+        <section data-background="../images/SWB-CorpColl.png">
+        </section>
+        <section data-background="../images/SWB-IntellCollaboration.png">
+        </section>
+        <section data-background="../images/SWB-Corp.png">
+        </section>
+        <section data-background="../images/SWB-Mass.png">
+        </section>
+        <section data-background="../images/SWB-Targeted.png">
+        </section>
+
+        <section>
+          <h3>Immagini tratte da</h3>
+          <p><a href="https://surveillancewithoutborders.com/#/">
+            Surveillance Without Borders</a>.
+          </p>
+        </section>
+      </section>
+
+			<section>
+				<h1>Non c'è "un" nemico</h1>
+        <p class="left">Ci sono molteplici attori, avversari, modelli di business, azioni criminali ed attività non ancora regolate</p>
+        <p class="left">Ci si deve proteggere a priori, perché la rete è solo parzialmentesicura: alcune garanzie tecnologiche ci sono, ma i diritti fondamentali no
+        </p>
+        <br>
+        <p>
+          <a href="https://digitalfreedom.io/map/">
+            Digital Freedom Alliance</a>.
+        </p>
+			</section>
+
+      <section>
+        <h4>Signal</h4>
+        <div class="left">
+          <p><a href="https://whispersystems.org/">Pagina ufficiale</a>.</p>
+          <p><a href="https://itunes.apple.com/us/app/signal-private-messenger/id874139669">Apple store</a>.</p>
+          <p><a href="https://play.google.com/store/apps/details?id=org.thoughtcrime.securesms">Android store</a>.</p>
+        </div>
+        <h4>Procedura</h4>
+        <ul>
+          <li>Installate l'app, a seconda del sistema, la verifica via SMS sarà automatica o dovrete inserire manualmente un codice numerico</li>
+          <li>A seconda del sistema, vedrete tutti i vostri contatti presenti, o dovrete esplicitarlo nelle preferenze</li>
+        </ul>
+      </section>
+
+      <section>
+        <h4>Tor</h4>
+        <p class="left">
+          <a href="https://www.torproject.org/download/download-easy.html">
+         pagina di download ufficiale</a>.
+        </p>
+      </section>
+
+      <section>
+        <h2>Una prova</h2>
+        <p><a href="http://espresso.repubblica.it/inchieste/2016/04/28/news/informazioni-preliminari-sull-utilizzo-di-regenileaks-e-primo-accesso-1.263119">Andare a questo articolo, accedere <b>all'onion service</b> riportato</a>.</p>
+      </section>
+
+      <section>
+        <section>
+          <h2>"tracking"</h2>
+          <ul>
+            <li><a href="https://panopticlick.eff.org/">Panopticlick</a>.</li>
+            <li><a href="http://www.repubblica.it/tecnologia/sicurezza/2016/05/25/news/google_ti_osserva_ogni_tuo_movimento_sul_web_e_tracciato-140597287/">Google 80%</a>.</p>
+          </ul>
+        </section>
+        <section data-background="../images/trackography-wired.png">
+          <a href="https://trackography.org">Trackogrpahy</a>
+        </section>
+      </section>
+
+		<section>
+			<section>
+				<h2>Additional Resources</h2>
+				<ul>
+					<li><a href="https://www.ted.com/talks/glenn_greenwald_why_privacy_matters">Why Privacy Matters - Glenn Greenwald</a></li>
+					<li><a href="https://www.youtube.com/watch?v=JWII85UlzKw">How Tor Browser Works</a></li>
+				</ul>
+			</section>
+			<section>
+				<h3>Browser Extensions</h3>
+				<ul>
+					<li>AdBlock Plus / uBlock</li>
+					<li>Ghostery</li>
+					<li>HTTPS Everywhere</li>
+					<li>Lastpass / Enpass</li>
+				</ul>
+			</section>
+		</section>
+
+		<section>
+			<section>
+				<h1>FAQ</h1>
+			</section>
+			<section>
+				<h3>Signal mi chiede il numero di telefono. Glielo do?</h3>
+				<p class="center">Sì, signal popola la rubrica in un modo simile a whatsapp</p>
+				<p class="center">I numeri di telefono però non vengono caricati online</p>
+				<!-- Magari qua ci metti il link di come vengono gestiti i contatti, avevo letto l'articolo che citavi oggi ma non lo trovo -->
+			</section>
+			<section>
+				<h3>faq2</h3>
+				<p class="left">risp2</p>
+			</section>
+		</section>
+
+		<section data-background="../images/identiysplitting.jpg">
+      <h4>Fine!</h4>
+		</section>
+
+		</div>
+  </div>
+
+	<script src="../node_modules/reveal.js/lib/js/head.min.js"></script>
+    <script src="../node_modules/reveal.js/js/reveal.min.js"></script>
+
+	<script>
+		// Required, even if empty.
+		Reveal.initialize({
+		});
+	</script>
+</body>
+</html>
