@@ -1,214 +1,579 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-	<meta charset="utf-8">
-	<title>Signal+Tor</title>
-	<link rel="stylesheet" href="../node_modules/reveal.js/css/reveal.min.css">
-	<link rel="stylesheet" href="../node_modules/reveal.js/css/theme/default.css" id="theme">
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Giugno 2025">
+  <title>Sandbox IA &amp; Società Civile</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/theme/serif.css" id="theme">
+  <style>
+  .slides {
+      font-size: 0.75em;
+  }
+  .reveal ul {
+      display: block;
+  }
+  .reveal ol {
+      display: block;
+  }
 
-	<style>
-		.authorscointainer {
-			border: solid 2px wheat;
-			clear: both;
-			padding: 3px;
-		}
-		.left {
-			text-align: left;
-		}
-		.floatleft {
-			text-align: left;
-			clear: both;
-		}
-		.container {
-			float: left;
-			width: 50%;
-		}
-		.tableline {
-			border-collapse: collapse;
-			border-bottom: 1px solid #B4B5B0;
-		}
-	</style>
-	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
-	<script>
-		var blink = function() {
+  img {
+      max-height: 350px !important;
+  }
 
-			$('.blink').each(function() {
-				var elem = $(this);
-				setInterval(function() {
-					if (elem.css('visibility') == 'hidden') {
-						elem.css('visibility', 'visible');
-					} else {
-						elem.css('visibility', 'hidden');
-					}
-				}, 500);
-			});
-		}
-	</script>
+  figcaption {
+      font-size: 0.6em !important;
+      font-style: italic !important;
+  }
+
+  .subtitle {
+      font-style: italic !important;
+  }
+
+  .date {
+      font-size: 0.75em !important;
+  }
+  </style>
 </head>
-
 <body>
-	<div class="reveal">
-		<div class="slides">
+  <div class="reveal">
+    <div class="slides">
 
-			<section data-background="../images/manyface.jpg">
-				<h1>Signal + Tor</h1>
-        <h3>Proteggere telefonate, messaggi e navigazione</h3>
-				<p>Centro Studi Hermes</p>
-				<p>Coalizione Italiana Libertà e Diritti (CILD)</p>
-			</section>
+<section id="title-slide">
+  <h1 class="title">Sandbox IA &amp; Società Civile</h1>
+  <p class="author">Giugno 2025</p>
+  <p class="date">v0.1 o v1.1?</p>
+</section>
 
+<section id="contesto-italiano" class="slide level2">
+<h2>1 · Contesto italiano</h2>
+<ul>
+<li><strong>AI Act</strong> → obbligo sandbox nazionale (dead‑line 02
+ago 2026)<br />
+</li>
+<li><strong>Bozza decreto attuativo</strong> → ACN + AGID come autorità
+competenti<br />
+</li>
+<li>Spazio aperto a <strong>sandbox tematiche</strong> (privacy, lavoro,
+sanità…)<br />
+</li>
+<li>Opportunità: ecosistema plurale = minori conflitti di ruolo</li>
+<li>Esistanza Sandbox non AI (fintech, privacy)</li>
+</ul>
+</section>
+<section id="contesto-internazionale" class="slide level2">
+<h2>1.1 · Contesto internazionale</h2>
+<ul>
+<li><strong>Spagna – AESIA Sandbox (dal 2024)</strong> – la nuova
+Agenzia spagnola per la supervisione dell’:contentReference<span
+data-index="0">oaicite:0</span>dbox nazionale; prima call aperta, focus
+su biometria e sanità.<br />
+</li>
+<li><strong>Norvegia – Datatilsynet Sandbox</strong> – ambiente
+privacy-centrico dell’autorità norvegese: tutti i
+report:contentReference<span data-index="1">oaicite:1</span>imo ciclo
+dedicato al <em>federated learning</em>.<br />
+</li>
+<li><strong>Regno Unito</strong>
+<ul>
+<li><em>ICO Regulatory Sandbox</em> – aiuta i progetti IA a rispettare
+la protezione dati; pubblicato u:contentReference<span
+data-index="2">oaicite:2</span> nel 2024.<br />
+</li>
+<li><em>FCA “Supercharged Sandbox”</em> (in partnership con Nvidia,
+2025) – piattaforma fintech che offre potenza di calcolo e
+consulenz:contentReference<span data-index="3">oaicite:3</span>ata.</li>
+</ul></li>
+</ul>
+<blockquote>
+<p>Diversi Paesi usino le sandbox per bilanciare innovazione: da capire
+se è davvero un regalo alle corp?</p>
+</blockquote>
+</section>
+<section class="slide level2">
 
-      <section>
-        <section>
-          <h3>Di preciso, da chi ci dovremmo proteggere?</h3>
-          <p>Pensamo a quel che ci ha rivelato Snowden, cosa possiamo dedurre?</p>
-        </section>
+<h3 id="timeline-normativa">Timeline normativa</h3>
+<table>
+<thead>
+<tr>
+<th>2024</th>
+<th>2025</th>
+<th>2026</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI Act in G.U. UE</td>
+<td>Decreto nazionale</td>
+<td>Sandbox operative</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="coinvolgimento-società-civile-perché-farlo"
+class="slide level2">
+<h2>2 · Coinvolgimento società civile — Perché farlo</h2>
+<ul>
+<li>↑ Legittimità e fiducia pubblica<br />
+</li>
+<li>Feedback realistici → qualità dei test<br />
+</li>
+<li>Antidoto a “badge cosmetici” (audit fittizio)</li>
+<li>NGO otterrebbero ulteriori ruoli nel rappresentare cittadini</li>
+</ul>
+</section>
+<section class="slide level2">
 
-        <section data-background="../images/SWB-Leaders.png">
-        </section>
-        <section data-background="../images/SWB-CorpColl.png">
-        </section>
-        <section data-background="../images/SWB-IntellCollaboration.png">
-        </section>
-        <section data-background="../images/SWB-Corp.png">
-        </section>
-        <section data-background="../images/SWB-Mass.png">
-        </section>
-        <section data-background="../images/SWB-Targeted.png">
-        </section>
+<h3 id="lacune-possibili">2.1 Lacune possibili</h3>
+<ol type="1">
+<li>La Sandbox potrebbe girare sull’infrastruttura del cliente.</li>
+<li>La Sandbox potrebbe essere un “periodo di prova” mentre c’è già il
+sistema in produzione.</li>
+<li>La Sandbox permette di rivendicare una conformità che cambia al
+prossimo aggiornamento.</li>
+<li>La Sandbox svolge dei test utili all’agenza dell’Agenzia ma non a
+quella della società civili.</li>
+<li>La Sandbox non produce esperienza riutilizzabile per futuri
+attori</li>
+</ol>
+</section>
+<section class="slide level2">
 
-        <section>
-          <h3>Immagini tratte da</h3>
-          <p><a href="https://surveillancewithoutborders.com/#/">
-            Surveillance Without Borders</a>.
-          </p>
-        </section>
-      </section>
+<h3 id="modello-partecipativo-proposto">2.2 Modello partecipativo
+proposto</h3>
+<ol type="1">
+<li><strong>Scoping rischi</strong> dell’autorità → lista impatti
+pubblica<br />
+</li>
+<li><strong>Call</strong> aperte associazioni / gruppi cittadini<br />
+</li>
+<li><strong>Sessione riservata</strong>: impresa + società civile +
+autorità<br />
+</li>
+<li><strong>Report intermedio</strong> aperto a osservazioni<br />
+</li>
+<li><strong>Exit report</strong> pubblico con <em>lessons
+learned</em></li>
+</ol>
+</section>
+<section class="slide level2">
 
-			<section>
-				<h1>Non c'è "un" nemico</h1>
-        <p class="left">Ci sono molteplici attori, avversari, modelli di business, azioni criminali ed attività non ancora regolate</p>
-        <p class="left">Ci si deve proteggere a priori, perché la rete è solo parzialmentesicura: alcune garanzie tecnologiche ci sono, ma i diritti fondamentali no
-        </p>
-        <br>
-        <p>
-          <a href="https://digitalfreedom.io/map/">
-            Digital Freedom Alliance</a>.
-        </p>
-			</section>
+<h3 id="best-practice-internazionali">2.3 Best practice
+internazionali</h3>
+<table>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 23%" />
+<col style="width: 58%" />
+</colgroup>
+<thead>
+<tr>
+<th>Paese</th>
+<th>Sandbox</th>
+<th>Coinvolgimento utenti</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>UK – ICO</strong></td>
+<td>Stakeholder panel ad hoc, survey pubbliche</td>
+<td>Co-design criteri etici</td>
+</tr>
+<tr>
+<td><strong>Norvegia – Datatilsynet</strong></td>
+<td>Workshop aperti + report 100 % pubblici</td>
+<td>Trasparenza radicale</td>
+</tr>
+<tr>
+<td><strong>Canada – OSFI</strong></td>
+<td>Focus group consumatori</td>
+<td>Feedback su explainability</td>
+</tr>
+</tbody>
+</table>
+<p>Esistono anche sandbox private</p>
+</section>
+<section id="governance-sandbox-tematiche" class="slide level2">
+<h2>3 · Governance &amp; sandbox tematiche</h2>
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 26%" />
+<col style="width: 12%" />
+<col style="width: 44%" />
+</colgroup>
+<thead>
+<tr>
+<th>Sandbox</th>
+<th>Autorità pivot</th>
+<th>Focus</th>
+<th>Ammissibilità (esempio)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Privacy &amp; Dati</td>
+<td>Garante Privacy</td>
+<td>DPIA, logging</td>
+<td>High-risk + dataset personali</td>
+</tr>
+<tr>
+<td>Cyber-security</td>
+<td>ACN</td>
+<td>Robustezza, attacchi</td>
+<td>Tutti i livelli di rischio</td>
+</tr>
+<tr>
+<td>PA &amp; Servizi digitali</td>
+<td>AGID</td>
+<td>Accessibilità, UX</td>
+<td>Soluzioni per enti pubblici</td>
+</tr>
+<tr>
+<td>Lavoro &amp; Algoritmi HR</td>
+<td>INL / INPS</td>
+<td>Fairness occupazionale</td>
+<td>Algoritmi di selezione</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
 
-      <section>
+<h3 id="flusso-decisionale-alto-rischio">3.1 Flusso decisionale (alto
+rischio)</h3>
+<p>Non è chiaro quali poteri prescrittivi abbia l’Autorità che gestisce
+il servizio di Sandbox</p>
+<pre><code>Domanda impresa ──► Autorità pivot
+         │
+         ├─► Veto → Iterazione / Stop
+         │
+         └─► OK → Coinvolgimento società civile → Sperimentazione controllata → Exit report</code></pre>
+<p><em>(Solo l’autorità pivot può esercitare veto formale.)</em></p>
+</section>
+<section id="supporto-open-source-software-ai-compliance-rag"
+class="slide level2">
+<h2>4 · Supporto Open Source Software? · “AI Compliance RAG”</h2>
+<table>
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 30%" />
+<col style="width: 17%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Funzionalità</th>
+<th>Output</th>
+<th>Budget stima</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A – Lightweight</strong></td>
+<td>Chatbot Q&amp;A + link normativi</td>
+<td>PDF guida</td>
+<td>&lt; €25 k</td>
+</tr>
+<tr>
+<td><strong>B – Integrato</strong></td>
+<td>Upload artefatti + mini‑DPIA auto‑gen</td>
+<td>Attestato firmato</td>
+<td>€60‑100 k</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
 
-        <section>
-          <h4>Signal</h4>
-          <div class="left">
-            <p><a href="https://whispersystems.org/">Pagina ufficiale</a>.</p>
-            <p><a href="https://itunes.apple.com/us/app/signal-private-messenger/id874139669">Apple store</a>.</p>
-            <p><a href="https://play.google.com/store/apps/details?id=org.thoughtcrime.securesms">Android store</a>.</p>
-          </div>
-          <h4>Procedura</h4>
-          <ul>
-            <li>Installate l'app, a seconda del sistema, la verifica via SMS sarà automatica o dovrete inserire manualmente un codice numerico</li>
-            <li>A seconda del sistema, vedrete tutti i vostri contatti presenti, o dovrete esplicitarlo nelle preferenze</li>
-          </ul>
-        </section>
+<h3 id="supporto-open-source-software-ai-compliance-rag-1">4.1 ·
+Supporto Open Source Software? · “AI Compliance RAG”</h3>
+<pre><code>[Front‑end] ⇄ [RAG Engine] ⇄ [Vector DB]
+                            ⇄ [Normative KB]</code></pre>
+<ul>
+<li>Base dati: corpus AI Act, GDPR, linee guida EDPB, ISO 42001<br />
+</li>
+<li>Output: JSON + PDF; firma CAdES opzionale</li>
+</ul>
+</section>
+<section id="standard-tecnici-per-scrutinabilità" class="slide level2">
+<h2>5 · Standard tecnici per scrutinabilità</h2>
+<table>
+<colgroup>
+<col style="width: 28%" />
+<col style="width: 34%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr>
+<th>Requisito AI Act</th>
+<th>Standard / Framework</th>
+<th>Note utili in sandbox</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Art. 9 Data governance</td>
+<td><strong>Datasheets for Datasets</strong></td>
+<td>Template dati</td>
+</tr>
+<tr>
+<td>Art. 15 Registri eventi</td>
+<td><strong>OpenTelemetry Logs</strong></td>
+<td>Logging uniforme</td>
+</tr>
+<tr>
+<td>Art. 17 Trasparenza</td>
+<td><strong>ISO/IEC 42001</strong> + <strong>Model Cards</strong></td>
+<td>Policy + scheda modello</td>
+</tr>
+<tr>
+<td>Art. 18 Accuracy &amp; Robustness</td>
+<td><strong>NIST AI RMF</strong></td>
+<td>Controlli rischio</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
 
-        <section>
-            <h4>Bonus</h4>
-            <p><b>Ma se anche whatsapp è cifrato, perché usare Signal?</b></p>
-            <p>In generale, perché è più sicuro, e <a href="https://medium.com/@_vecna/whatsapp-security-santa-or-cryptography-as-cost-reduction-40a201b46708">perché alla lunga Telegram e Signal possono portare a scalfire un po' il monopolio di Facebook</a>.</p>
-
-        </section>
-      </section>
-
-      <section>
-
-        <section data-background="white">
-          <img src="../images/Tor.png" />
-        </section>
-
-        <section>
-          <h4>Tor</h4>
-          <p class="left">
-            <a href="https://www.torproject.org/download/download-easy.html">
-           pagina di download ufficiale</a>.
-          </p>
-          <p class="left">
-          <a href="https://www.youtube.com/watch?v=T07gkTc5Fcc">How Tor Browser Works: Video</a>
-          </p>
-        </section>
-
-        <section>
-          <h2>Tor: due prove</h2>
-          <p class="left"><a href="http://espresso.repubblica.it/inchieste/2016/04/28/news/informazioni-preliminari-sull-utilizzo-di-regenileaks-e-primo-accesso-1.263119">Andare a questo articolo, accedere <b>all'onion service</b> riportato</a>.</p>
-          <p class="left">Test: <a href="https://www.whatismyip.com/">Guarda il tuo indirizzo IP</a></p>
-        </section>
-
-
-      </section>
-
-      <section>
-        <section>
-          <h2>"tracking"</h2>
-          <ul>
-            <li><a href="https://panopticlick.eff.org/">Panopticlick</a>.</li>
-            <li><a href="http://www.repubblica.it/tecnologia/sicurezza/2016/05/25/news/google_ti_osserva_ogni_tuo_movimento_sul_web_e_tracciato-140597287/">Google 80%</a>.</p>
-          </ul>
-        </section>
-        <section data-background="../images/trackography-wired.png">
-          <a href="https://trackography.org">Trackogrpahy</a>
-        </section>
-      </section>
-
-		<section>
-			<section>
-				<h2>Additional Resources</h2>
-				<ul>
-					<li><a href="https://www.ted.com/talks/glenn_greenwald_why_privacy_matters">Why Privacy Matters - Glenn Greenwald</a></li>
-					<li><a href="https://www.youtube.com/watch?v=JWII85UlzKw">How Tor Browser Works</a></li>
-				</ul>
-			</section>
-			<section>
-				<h3>Browser Extensions</h3>
-				<ul>
-					<li>AdBlock Plus / uBlock</li>
-					<li>Ghostery</li>
-					<li>HTTPS Everywhere</li>
-					<li>Lastpass / Enpass</li>
-				</ul>
-			</section>
-		</section>
-
-		<section>
-			<section>
-				<h1>FAQ</h1>
-			</section>
-			<section>
-				<h3>Signal mi chiede il numero di telefono. Glielo do?</h3>
-				<p class="center">Sì, signal popola la rubrica in un modo simile a whatsapp</p>
-				<p class="center">I numeri di telefono però non vengono caricati online</p>
-				<!-- Magari qua ci metti il link di come vengono gestiti i contatti, avevo letto l'articolo che citavi oggi ma non lo trovo -->
-			</section>
-			<section>
-				<h3>faq2</h3>
-				<p class="left">risp2</p>
-			</section>
-		</section>
-
-		<section data-background="../images/identiysplitting.jpg">
-      <h4>Fine!</h4>
-		</section>
-
-		</div>
+<h3 id="perchè-spingere-per-formati-open">5.1 Perchè spingere per
+formati open ?</h3>
+<ul>
+<li>Con un formato aperto e riusabile, chi sviluppa modelli di AI
+avrebbe un modo standard* per garantire ispezione e revisione.
+(OpenTelemetry)</li>
+<li>Con un formato standard per documentare il proprio design, sarebbe
+più facile individuale blackbox, dipendenze, bias. Si avrebbe un
+ecosistema meno artigianale. (e.g. un template prodotto dall’Agenzia
+Nazionale AI o da quella Europea)</li>
+</ul>
+</section>
+<section id="evidenze-internazionali" class="slide level2">
+<h2>6 · Evidenze internazionali</h2>
+<table>
+<colgroup>
+<col style="width: 41%" />
+<col style="width: 32%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Paese / Progetto</th>
+<th>Punti chiave</th>
+<th>Take-away</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>UK – ICO Regulatory Sandbox</strong></td>
+<td>50+ progetti testati dal 2019, “Insight Report 2024”, forte
+approccio data-protection-first con panel utenti</td>
+<td>Modello di coinvolgimento stakeholder e guidance modulare</td>
+</tr>
+<tr>
+<td><strong>Norvegia – Datatilsynet Sandbox</strong></td>
+<td>5 cicli completati, report 100 % pubblici; ultimi casi su generative
+AI e federated learning</td>
+<td>Massima trasparenza e condivisione di <em>lessons learned</em></td>
+</tr>
+<tr>
+<td><strong>Spagna – AESIA Sandbox IA</strong></td>
+<td>Prima call 2024: 20 progetti, 60 % high-risk, focus biometria e
+sanità; mentoring pubblico-privato</td>
+<td>Processo “high-risk only” e cooperazione inter-agenzia</td>
+</tr>
+</tbody>
+</table>
+</section>
+    </div>
   </div>
 
-	<script src="../node_modules/reveal.js/lib/js/head.min.js"></script>
-    <script src="../node_modules/reveal.js/js/reveal.min.js"></script>
+  <script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
 
-	<script>
-		// Required, even if empty.
-		Reveal.initialize({
-		});
-	</script>
-</body>
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js/plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js/plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js/plugin/zoom/zoom.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
 </html>

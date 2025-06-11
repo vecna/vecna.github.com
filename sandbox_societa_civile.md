@@ -1,6 +1,6 @@
 % Sandbox IA & Società Civile  
-% Centro Hermes – Giugno 2025  
-% v0.1
+% Giugno 2025  
+% v0.1 o v1.1?
 
 ---
 
@@ -10,6 +10,19 @@
 - **Bozza decreto attuativo** → ACN + AGID come autorità competenti  
 - Spazio aperto a **sandbox tematiche** (privacy, lavoro, sanità…)  
 - Opportunità: ecosistema plurale = minori conflitti di ruolo
+- Esistanza Sandbox non AI (fintech, privacy)
+
+---
+
+## 1.1 · Contesto internazionale
+
+- **Spagna – AESIA Sandbox (dal 2024)** – la nuova Agenzia spagnola per la supervisione dell’:contentReference[oaicite:0]{index=0}dbox nazionale; prima call aperta, focus su biometria e sanità.  
+- **Norvegia – Datatilsynet Sandbox** – ambiente privacy-centrico dell’autorità norvegese: tutti i report:contentReference[oaicite:1]{index=1}imo ciclo dedicato al *federated learning*.  
+- **Regno Unito**  
+  - *ICO Regulatory Sandbox* – aiuta i progetti IA a rispettare la protezione dati; pubblicato u:contentReference[oaicite:2]{index=2} nel 2024.  
+  - *FCA “Supercharged Sandbox”* (in partnership con Nvidia, 2025) – piattaforma fintech che offre potenza di calcolo e consulenz:contentReference[oaicite:3]{index=3}ata.  
+
+> Diversi Paesi usino le sandbox per bilanciare innovazione: da capire se è davvero un regalo alle corp?
 
 ---
 
@@ -26,20 +39,31 @@
 - ↑ Legittimità e fiducia pubblica  
 - Feedback realistici → qualità dei test  
 - Antidoto a “badge cosmetici” (audit fittizio)
+- NGO otterrebbero ulteriori ruoli nel rappresentare cittadini
 
 ---
 
-### 2.1 Modello partecipativo proposto
+### 2.1 Lacune possibili
+
+1. La Sandbox potrebbe girare sull'infrastruttura del cliente.
+2. La Sandbox potrebbe essere un "periodo di prova" mentre c'è già il sistema in produzione.
+3. La Sandbox permette di rivendicare una conformità che cambia al prossimo aggiornamento.
+4. La Sandbox svolge dei test utili all'agenza dell'Agenzia ma non a quella della società civili.
+5. La Sandbox non produce esperienza riutilizzabile per futuri attori
+
+---
+
+### 2.2 Modello partecipativo proposto
 
 1. **Scoping rischi** dell’autorità → lista impatti pubblica  
-2. **Call** a associazioni / gruppi cittadini  
+2. **Call** aperte associazioni / gruppi cittadini  
 3. **Sessione riservata**: impresa + società civile + autorità  
 4. **Report intermedio** aperto a osservazioni  
 5. **Exit report** pubblico con *lessons learned*
 
 ---
 
-### 2.2 Best practice internazionali
+### 2.3 Best practice internazionali
 
 | Paese | Sandbox | Coinvolgimento utenti |
 |-------|---------|-----------------------|
@@ -47,7 +71,7 @@
 | **Norvegia – Datatilsynet** | Workshop aperti + report 100 % pubblici | Trasparenza radicale |
 | **Canada – OSFI** | Focus group consumatori | Feedback su explainability |
 
-*(Da valutare l’adattabilità al contesto italiano.)*
+Esistono anche sandbox private
 
 ---
 
@@ -62,7 +86,9 @@
 
 ---
 
-### 3.1 Flusso decisionale (alta rischio)
+### 3.1 Flusso decisionale (alto rischio)
+
+Non è chiaro quali poteri prescrittivi abbia l'Autorità che gestisce il servizio di Sandbox
 
 ```
 Domanda impresa ──► Autorità pivot
@@ -76,7 +102,7 @@ Domanda impresa ──► Autorità pivot
 
 ---
 
-## 4 · Supporto OSS · “AI Compliance RAG”
+## 4 · Supporto Open Source Software? · “AI Compliance RAG”
 
 | Scenario | Funzionalità | Output | Budget stima |
 |----------|--------------|--------|--------------|
@@ -85,7 +111,7 @@ Domanda impresa ──► Autorità pivot
 
 ---
 
-### 4.1 Architettura (Scenario B)
+### 4.1 · Supporto Open Source Software? · “AI Compliance RAG”
 
 ```
 [Front‑end] ⇄ [RAG Engine] ⇄ [Vector DB]
@@ -94,14 +120,6 @@ Domanda impresa ──► Autorità pivot
 
 - Base dati: corpus AI Act, GDPR, linee guida EDPB, ISO 42001  
 - Output: JSON + PDF; firma CAdES opzionale
-
----
-
-### 4.2 Roadmap di sviluppo
-
-1. PoC domanda‑risposta (Q3‑2025)  
-2. Upload artefatti + validatore schema (Q1‑2026)  
-3. Firma digitale attestato (Q2‑2026)
 
 ---
 
@@ -116,26 +134,19 @@ Domanda impresa ──► Autorità pivot
 
 ---
 
-### 5.1 Esempio snippet log (OpenTelemetry)
+### 5.1 Perchè spingere per formati open ? 
 
-```json
-{
-  "timestamp": "2025-06-09T08:22:11Z",
-  "app.ai_stage": "sandbox_test",
-  "input.hash": "9f1c…",
-  "output.hash": "37ab…",
-  "user_role": "beta_tester_civil",
-  "decision_score": 0.82
-}
-```
+- Con un formato aperto e riusabile, chi sviluppa modelli di AI avrebbe un modo standard\* per garantire ispezione e revisione. (OpenTelemetry)
+- Con un formato standard per documentare il proprio design, sarebbe più facile individuale blackbox, dipendenze, bias. Si avrebbe un ecosistema meno artigianale. (e.g. un template prodotto dall'Agenzia Nazionale AI o da quella Europea)
+
 
 ---
 
 ## 6 · Evidenze internazionali
 
-| Progetto | KPI pubblici | “Take‑away” |
-|----------|--------------|-------------|
-| **EUSAIR** | 3 pilot, 11 SME, 2 linee guida rilasciate | Framework condiviso |
-| **Spagna** | 20 progetti ammessi, 60 % high‑risk | Focus biometria‑sanità |
-| **Norvegia** | 5 cicli, 100 % report open | Massima trasparenza |
+| Paese / Progetto | Punti chiave | Take-away |
+|------------------|--------------|-----------|
+| **UK – ICO Regulatory Sandbox** | 50+ progetti testati dal 2019, “Insight Report 2024”, forte approccio data-protection-first con panel utenti | Modello di coinvolgimento stakeholder e guidance modulare |
+| **Norvegia – Datatilsynet Sandbox** | 5 cicli completati, report 100 % pubblici; ultimi casi su generative AI e federated learning | Massima trasparenza e condivisione di *lessons learned* |
+| **Spagna – AESIA Sandbox IA** | Prima call 2024: 20 progetti, 60 % high-risk, focus biometria e sanità; mentoring pubblico-privato | Processo “high-risk only” e cooperazione inter-agenzia |
 
