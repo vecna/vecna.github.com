@@ -84,7 +84,7 @@ I criteri implementativi di queste soluzioni possono avere un effetto incisivo s
 
 ---
 
-### 3.1 Flusso decisionale (alto rischio)
+### 3.1 Flusso decisionale
 
 Non è chiaro quali poteri prescrittivi abbia l'Autorità che gestisce il servizio di Sandbox
 
@@ -125,11 +125,10 @@ Domanda impresa ──► Autorità pivot
 
 ### 4.2 · Scenario (B) Integrato · “AI Compliance RAG”
 
-Come la modalità leggera:
-
-- Necessario citare le fonti
-- firma CAdES opzionale
-- Produzione checklist operative
+- Come la modalità leggera, più:
+  - Necessario citare le fonti
+  - firma CAdES opzionale
+  - Produzione checklist operative
 
 ---
 
@@ -158,3 +157,4 @@ Come la modalità leggera:
 - Con un formato standard per **documentare il proprio design**, sarebbe più facile individuare terze parti, dipendenze, bias. 
   - Si avrebbe un ecosistema meno artigianale. (e.g. un template prodotto dall'Agenzia Nazionale AI o da quella Europea)
   - La separazione in componenti è l'anticorpo al proliferare di blackbox.
+- API (Negoziate tra sviluppatori e autorità) per verificare la conformità, le versioni, lo stato del sistema
